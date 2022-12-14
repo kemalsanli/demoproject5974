@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
         setSearchBarAttributes()
         setCollectionViewAttributes()
         configureViews()
+        hideKeyboardWhenTappedAround()
     }
     
     func setViewAttributes(){
@@ -98,5 +99,17 @@ class MainViewController: UIViewController {
 extension MainViewController: PresenterToViewMainProtocol {    
     func performDataRefresh() {
         self.collectionView.reloadData()
+    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                         action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
 }
