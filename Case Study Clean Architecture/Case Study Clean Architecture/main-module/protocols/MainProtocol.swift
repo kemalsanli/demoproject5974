@@ -24,7 +24,7 @@ protocol PresenterToInteractorMainProtocol {
     var MainPresenter:InteractorToPresenterMainProtocol? {get set}
     
     func apiCall(Keyword: String)
-    func downloadImages(Array: [String])
+    func downloadImages(array: [String])
     func calculateImageSize(Image: UIImage) -> Int
 }
 

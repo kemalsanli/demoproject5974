@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "DB142856-DC21-4EBE-800B-04F84BA8709D",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Case Study Clean Architecture.xcodeproj",
+      "identifier" : "4CC821C229311C3D0038BDE5",
+      "name" : "Case Study Clean Architecture"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Case Study Clean Architecture.xcodeproj",
+        "identifier" : "4CC821D829311C3E0038BDE5",
+        "name" : "Case Study Clean ArchitectureTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Case Study Clean Architecture.xcodeproj",
+        "identifier" : "4CC821E229311C3E0038BDE5",
+        "name" : "Case Study Clean ArchitectureUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

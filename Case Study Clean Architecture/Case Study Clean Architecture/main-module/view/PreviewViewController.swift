@@ -26,14 +26,15 @@ class PreviewViewController: UIViewController {
     }
     
     func setViewAttributes(){
-        view.backgroundColor = .white
+        view.backgroundColor = Constants.backgroundColor
     }
     
     func setNavigationBarAttributes() {
         guard let navigationController = self.navigationController else { return }
         navigationController.navigationBar.barStyle = .default
         navigationController.navigationBar.isTranslucent = true
-        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.backgroundColor = Constants.backgroundColor
+        navigationController.navigationBar.tintColor = Constants.textColor
     }
     
     func setConstraints() {
@@ -52,4 +53,9 @@ class PreviewViewController: UIViewController {
     func setImageView() {
         imageView.image = previewImage
     }
+}
+
+fileprivate enum Constants {
+    static let textColor: UIColor = UIColor(named: "Text Color")!
+    static let backgroundColor: UIColor = UIColor(named: "Background Color")!
 }

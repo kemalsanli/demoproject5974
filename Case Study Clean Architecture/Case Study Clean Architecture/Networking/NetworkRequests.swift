@@ -8,10 +8,7 @@
 import Foundation
 
 class NetworkRequests {
-    func requestAndParse<T: Decodable>(url:String, object: T.Type, completion: @escaping (T) -> Void) {
-            guard let url =  URL(string: url) else {
-                return
-            }
+    func requestAndParse<T: Decodable>(url:URL, object: T.Type, completion: @escaping (T) -> Void) {
             URLSession.shared.dataTask(with: url) { data, response, taskError in
                 guard let httpResponse = response as? HTTPURLResponse,
                       (200..<300).contains(httpResponse.statusCode),

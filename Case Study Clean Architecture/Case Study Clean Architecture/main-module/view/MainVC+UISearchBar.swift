@@ -17,11 +17,10 @@ extension MainViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
     }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        MainPresenter?.getSearchResult(Keyword: searchText)
-    }
+
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchText = searchBar.text else { return }
         MainPresenter?.getSearchResult(Keyword: searchText)
+        view.endEditing(true)
     }
 }

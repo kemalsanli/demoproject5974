@@ -12,8 +12,8 @@ class MainViewController: UIViewController {
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.tintColor = UIColor.black.withAlphaComponent(1.0)
-        searchBar.placeholder = "Search"
-        searchBar.backgroundColor = UIColor.clear
+        searchBar.placeholder = Constants.searchBarPlaceholder
+        searchBar.backgroundColor = Constants.backgroundColor
         searchBar.barTintColor = UIColor.clear
         searchBar.searchBarStyle = .minimal
         searchBar.returnKeyType = .search
@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     }()
     
     lazy var collectionView: UICollectionView = {
-        let layout = createCVLayout(spacing: 10 , columnCount: 5)
+        let layout = createCVLayout(spacing: Constants.cvLayoutDefaultSpacing , columnCount: Constants.cvLayoutDefaultColumnCount)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(ElementCell.self, forCellWithReuseIdentifier: ElementCell.identifier)
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.identifier)
@@ -50,18 +50,19 @@ class MainViewController: UIViewController {
         setSearchBarAttributes()
         setCollectionViewAttributes()
         configureViews()
-        hideKeyboardWhenTappedAround()
     }
     
     func setViewAttributes(){
-        view.backgroundColor = .white
-        self.title = "KABAK"
+        view.backgroundColor = Constants.backgroundColor
+        self.title = Constants.viewTitle
     }
     
     func setNavigationBarAttributes() {
         guard let navigationController = self.navigationController else { return }
         navigationController.navigationBar.barStyle = .default
         navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.backgroundColor = Constants.backgroundColor
+        navigationController.navigationBar.tintColor = Constants.textColor
     }
     
     func configureViews(){
@@ -102,14 +103,11 @@ extension MainViewController: PresenterToViewMainProtocol {
     }
 }
 
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tapGesture = UITapGestureRecognizer(target: self,
-                         action: #selector(hideKeyboard))
-        view.addGestureRecognizer(tapGesture)
-    }
-
-    @objc func hideKeyboard() {
-        view.endEditing(true)
-    }
+fileprivate enum Constants {
+    static let searchBarPlaceholder: String = "Search"
+    static let cvLayoutDefaultSpacing: CGFloat = 10
+    static let cvLayoutDefaultColumnCount: CGFloat = 5
+    static let viewTitle: String = "KABAK"
+    static let textColor: UIColor = UIColor(named: "Text Color")!
+    static let backgroundColor: UIColor = UIColor(named: "Background Color")!
 }

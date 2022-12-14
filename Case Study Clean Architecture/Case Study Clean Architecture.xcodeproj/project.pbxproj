@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4C0E3298293384D7005CAE62 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E3297293384D7005CAE62 /* SectionHeader.swift */; };
-		4C121D4429346854007038C5 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C121D4329346854007038C5 /* Download.swift */; };
 		4CC821C729311C3D0038BDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC821C629311C3D0038BDE5 /* AppDelegate.swift */; };
 		4CC821C929311C3D0038BDE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC821C829311C3D0038BDE5 /* SceneDelegate.swift */; };
 		4CC821CB29311C3D0038BDE5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC821CA29311C3D0038BDE5 /* MainViewController.swift */; };
 		4CC821D029311C3E0038BDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC821CF29311C3E0038BDE5 /* Assets.xcassets */; };
 		4CC821D329311C3E0038BDE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC821D129311C3E0038BDE5 /* LaunchScreen.storyboard */; };
 		4CC821DE29311C3E0038BDE5 /* Case_Study_Clean_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC821DD29311C3E0038BDE5 /* Case_Study_Clean_ArchitectureTests.swift */; };
-		4CC821E829311C3E0038BDE5 /* Case_Study_Clean_ArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC821E729311C3E0038BDE5 /* Case_Study_Clean_ArchitectureUITests.swift */; };
 		4CC821EA29311C3E0038BDE5 /* Case_Study_Clean_ArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC821E929311C3E0038BDE5 /* Case_Study_Clean_ArchitectureUITestsLaunchTests.swift */; };
 		4CC82203293144DF0038BDE5 /* MainVC+UICollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC82202293144DF0038BDE5 /* MainVC+UICollectionViewController.swift */; };
 		4CC8220529316AAE0038BDE5 /* MainVC+UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8220429316AAE0038BDE5 /* MainVC+UISearchBar.swift */; };
@@ -28,6 +26,7 @@
 		4CFCD61E29324F110035D531 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCD61D29324F110035D531 /* MainPresenter.swift */; };
 		4CFCD62029324F580035D531 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCD61F29324F580035D531 /* MainRouter.swift */; };
 		4CFCD62429328DC80035D531 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFCD62329328DC80035D531 /* PreviewViewController.swift */; };
+		8410169C293741C1004B25F7 /* Case_Study_Clean_ArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC821E729311C3E0038BDE5 /* Case_Study_Clean_ArchitectureUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 
 /* Begin PBXFileReference section */
 		4C0E3297293384D7005CAE62 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
-		4C121D4329346854007038C5 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		4CC821C329311C3D0038BDE5 /* Case Study Clean Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Case Study Clean Architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC821C629311C3D0038BDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CC821C829311C3D0038BDE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				4CFCD61729324B040035D531 /* ResultModel.swift */,
-				4C121D4329346854007038C5 /* Download.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -364,7 +361,6 @@
 				4CC821CB29311C3D0038BDE5 /* MainViewController.swift in Sources */,
 				4CFCD62029324F580035D531 /* MainRouter.swift in Sources */,
 				4CFCD61129322C8F0035D531 /* NoDataView.swift in Sources */,
-				4C121D4429346854007038C5 /* Download.swift in Sources */,
 				4CFCD62429328DC80035D531 /* PreviewViewController.swift in Sources */,
 				4CC821C729311C3D0038BDE5 /* AppDelegate.swift in Sources */,
 				4CFCD61E29324F110035D531 /* MainPresenter.swift in Sources */,
@@ -388,7 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CC821E829311C3E0038BDE5 /* Case_Study_Clean_ArchitectureUITests.swift in Sources */,
+				8410169C293741C1004B25F7 /* Case_Study_Clean_ArchitectureUITests.swift in Sources */,
 				4CC821EA29311C3E0038BDE5 /* Case_Study_Clean_ArchitectureUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/9Case_Study_Clean_Architecture.app/9Case_Study_Clean_ArchitectureApp";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -484,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/9Case_Study_Clean_Architecture.app/9Case_Study_Clean_ArchitectureApp";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -516,6 +514,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -539,9 +538,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68W97V5J84;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Case Study Clean Architecture/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -570,9 +571,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 68W97V5J84;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Case Study Clean Architecture/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -604,6 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68W97V5J84;
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
@@ -627,6 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68W97V5J84;
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
@@ -649,6 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68W97V5J84;
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sanli.Case-Study-Clean-ArchitectureUITests";
@@ -670,6 +676,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 68W97V5J84;
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "sanli.Case-Study-Clean-ArchitectureUITests";

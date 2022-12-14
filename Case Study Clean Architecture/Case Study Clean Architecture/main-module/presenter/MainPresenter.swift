@@ -23,10 +23,8 @@ final class MainPresenter: ViewToPresenterMainProtocol{
     
     func getSearchResult(Keyword: String) {
         let trimmedString = Keyword.trimmingCharacters(in: .whitespaces)
-        if trimmedString.count > 3 {
-            let lowercasedString = trimmedString.lowercased()
-            MainInteractor?.apiCall(Keyword: lowercasedString)
-        }
+        let lowercasedString = trimmedString.lowercased()
+        MainInteractor?.apiCall(Keyword: lowercasedString)
     }
     
     func getCellImage(indexPath: IndexPath) -> UIImage {
@@ -40,7 +38,7 @@ final class MainPresenter: ViewToPresenterMainProtocol{
         case 3:
             return imageSizemMoreThan500KB[indexPath.row]
         default:
-            return UIImage(systemName: "star")!
+            return UIImage(systemName: Constants.defaultUIImageName)!
         }
     }
     
@@ -82,7 +80,7 @@ extension MainPresenter: InteractorToPresenterMainProtocol {
         for result in Results {
             imageUrlsArray.append(contentsOf: result.screenshotUrls)
         }
-        MainInteractor?.downloadImages(Array: imageUrlsArray)
+        MainInteractor?.downloadImages(array: imageUrlsArray)
         DispatchQueue.main.async { [weak self] in
             self?.MainView?.performDataRefresh()
         }
@@ -109,17 +107,25 @@ extension MainPresenter: InteractorToPresenterMainProtocol {
     func getSectionHeaderTitle(Section: Int) -> String {
         switch Section {
         case 0:
-            return "0-100KB Images"
+            return Constants.sectionNameFor100orLowerKB
         case 1:
-            return "100-250KB Images"
+            return Constants.sectionNameFor250orLowerKB
         case 2:
-            return "250-500KB Images"
+            return Constants.sectionNameFor500orLowerKB
         case 3:
-            return "500 and more KB Images"
+            return Constants.sectionNameFor500orMoreKB
         default:
-            return "Unknown Section"
+            return Constants.defaultSectionName
         }
     }
 }
 
 
+private enum Constants {
+    static let defaultUIImageName: String = "star"
+    static let sectionNameFor100orLowerKB: String = "0-100KB Images"
+    static let sectionNameFor250orLowerKB: String = "100-250KB Images"
+    static let sectionNameFor500orLowerKB: String = "250-500KB Images"
+    static let sectionNameFor500orMoreKB: String = "500 and more KB Images"
+    static let defaultSectionName: String = "Unknown Section"
+}

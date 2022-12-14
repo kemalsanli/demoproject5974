@@ -12,18 +12,20 @@ class NoDataView: UIView {
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.tintColor = Constants.tintColor
         return imageView
     }()
     
     lazy var warningLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = Constants.textColor
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-    
+        self.backgroundColor = Constants.backgroundColor
         setConstraints()
         setComponents()
     }
@@ -47,7 +49,16 @@ class NoDataView: UIView {
     }
     
     func setComponents() {
-        imageView.image = UIImage(systemName: "multiply.circle") ?? UIImage()
-        warningLabel.text = "No Data"
+        imageView.image = UIImage(systemName: Constants.imageViewImageName) ?? UIImage()
+        warningLabel.text = Constants.warningLabelText
     }
 }
+
+private enum Constants {
+    static let imageViewImageName: String = "multiply.circle"
+    static let warningLabelText: String = "No Data"
+    static let textColor: UIColor = UIColor(named: "Text Color")!
+    static let backgroundColor: UIColor = UIColor(named: "Background Color")!
+    static let tintColor: UIColor = UIColor(named: "Tint Color")!
+}
+

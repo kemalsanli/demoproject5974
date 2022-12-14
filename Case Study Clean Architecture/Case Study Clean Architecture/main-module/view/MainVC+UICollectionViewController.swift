@@ -78,3 +78,4 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         navigationController?.pushViewController(vc, animated: true)
     }
 }
+

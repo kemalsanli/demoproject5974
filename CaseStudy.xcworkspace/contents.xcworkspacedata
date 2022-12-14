@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Case Study Clean Architecture/Case Study Clean Architecture.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Case Study Clean Architecture.xctestplan">
+   </FileRef>
 </Workspace>
